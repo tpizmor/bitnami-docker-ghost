@@ -39,7 +39,7 @@ jobs:
       - run:
           name: Build docker image
           command: |
-            curl -sL https://raw.githubusercontent.com/tompizmor/test-infra/chart-test/circle/docker-image-test.sh | bash -
+            curl -sL https://raw.githubusercontent.com/tpizmor/test-infra/chart-test/circle/docker-image-test.sh | bash -
       - save_cache:
           key: cache-{{ .Branch }}-{{ epoch }}
           paths:
@@ -51,9 +51,9 @@ jobs:
             echo CIRCLE_BRANCH is ${CIRCLE_BRANCH}
             if [ -n "${CIRCLE_TAG}" ]; then
               echo "Entering if"
-              curl -sL https://raw.githubusercontent.com/tompizmor/test-infra/chart-test/circle/docker-release-image.sh | bash -
+              curl -sL https://raw.githubusercontent.com/tpizmor/test-infra/chart-test/circle/docker-release-image.sh | bash -
             elif [ "${CIRCLE_BRANCH}" == "master" ]; then
-              curl -sL https://raw.githubusercontent.com/tompizmor/test-infra/chart-test/circle/docker-development-image.sh | bash -
+              curl -sL https://raw.githubusercontent.com/tpizmor/test-infra/chart-test/circle/docker-development-image.sh | bash -
             fi
 
 workflows:
