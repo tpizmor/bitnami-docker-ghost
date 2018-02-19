@@ -50,6 +50,7 @@ jobs:
             echo CIRCLE_TAG is ${CIRCLE_TAG}
             echo CIRCLE_BRANCH is ${CIRCLE_BRANCH}
             if [ -n "${CIRCLE_TAG}" ]; then
+              echo "Entering if"
               curl -sL https://raw.githubusercontent.com/tompizmor/test-infra/chart-test/circle/docker-release-image.sh | bash -
             elif [ "${CIRCLE_BRANCH}" == "master" ]; then
               curl -sL https://raw.githubusercontent.com/tompizmor/test-infra/chart-test/circle/docker-development-image.sh | bash -
