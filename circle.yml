@@ -11,9 +11,8 @@ jobs:
           CHART_NAME: ghost
           CHART_REPO: https://github.com/tompizmor/charts-1
           EXTRA_CHART_REPOS: "https://github.com/tompizmor/charts"
-          DOCKER_PROJECT: bitnami
-          QUAY_PROJECT: bitnami
-          GCLOUD_PROJECT: bitnami-containers
+          DOCKER_PROJECT: tompizmor
+
 
     steps:
       - checkout
