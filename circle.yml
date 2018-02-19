@@ -9,8 +9,8 @@ jobs:
           LATEST_STABLE: "1"
           IMAGE_NAME: ghost
           CHART_NAME: ghost
-          CHART_REPO: https://github.com/tompizmor/charts-1
-          EXTRA_CHART_REPOS_LIST: "https://github.com/tompizmor/charts"
+          CHART_REPO: https://github.com/tpizmor/charts-1
+          EXTRA_CHART_REPOS_LIST: "https://github.com/tpizmor/charts"
           DOCKER_PROJECT: tompizmor
 
 
